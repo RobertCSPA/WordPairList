@@ -19,6 +19,19 @@ public WordPairList(String[] words){
 
 /** Returns the number of matches as described in part (b).
 */
-public int numMatches()
-{ /* to be implemented in part (b) */ }
+public int numMatches() {
+    int count = 0;
+    for (WordPair wp : allPairs) {
+        if (wp.getFirst().equals(wp.getSecond())) {
+            count++;
+        }
+    }
+    return count;
+
+    
+}
+    @Override
+    public String toString() {
+        return allPairs.toString();
+    }
 }
